@@ -1,0 +1,16 @@
+# Git files
+.git
+.gitignore
+
+# Environment folders
+venv
+.env
+.env.local
+__pycache__/
+build/
+
+# Config files
+.vscode
+.idea
+.DS_Store
+

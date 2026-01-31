@@ -1,0 +1,14 @@
+#include <pybind11/pybind11.h>
+#include <pybind11/stl.h> // OBLIGATOIRE pour convertir vector <-> list automatiquement
+#include "../src/LinearModel.hpp"
+
+namespace py = pybind11;
+
+// "ML_ESGI" sera le nom de l'import en Python
+PYBIND11_MODULE(ML_ESGI, m) {
+    
+    py::class_<LinearModel>(m, "LinearModel")
+        .def(py::init<int>())
+        .def("train", &LinearModel::train)
+        .def("predict", &LinearModel::predict);
+}
